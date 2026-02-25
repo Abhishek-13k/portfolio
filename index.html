@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modern Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="bg-shape shape1"></div>
+    <div class="bg-shape shape2"></div>
+    <div class="bg-shape shape3"></div>
+
+
+<nav>
+    <h1>MyPortfolio</h1>
+    <ul>
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="hero" id="home">
+    <div class="hero-text">
+        <h2>Hello, I'm <span>Abhishek</span></h2>
+        <p>Creative developer building modern and visually impressive web experiences with clean and scalable design.</p>
+        <button class="btn" onclick="scrollToSection('contact')">Hire Me</button>
+    </div>
+
+    <div class="profile-pic">
+        <!-- Replace text below with your image -->
+        Your Image
+    </div>
+    <div class="skl">
+        <h1 id="skills">Skills</h1>
+    <div class="skills">
+            <span>MySql</span>
+            <span>Web development</span>
+            <span>MongoDB</span>
+            <span>Python</span>
+    </div>
+    </div>
+</section>
+
+<!-- <section class="projects" id="projects">
+    <h2>My Projects</h2>
+    <div class="project-grid">
+        <div class="project-card">
+            <h3>Project One</h3>
+            <p>Modern responsive web application with smooth UI.</p>
+            <button class="btn">View</button>
+        </div>
+        <div class="project-card">
+            <h3>Project Two</h3>
+            <p>Full stack project with authentication and database.</p>
+            <button class="btn">View</button>
+        </div>
+        <div class="project-card">
+            <h3>Project Three</h3>
+            <p>Creative UI design with advanced animations.</p>
+            <button class="btn">View</button>
+        </div>
+    </div>
+</section> -->
+
+<section class="projects" id="projects">
+    <h2>My Projects</h2>
+
+    <div class="slider-container">
+        <button class="slider-btn prev">&#10094;</button>
+
+        <div class="project-grid slider-track">
+            <div class="project-card">
+                <h3>Library Management System</h3>
+                <p>Modern responsive web application with smooth UI.</p>
+                <button class="btn"><a id="wlink" href="https://library-man13.infinityfreeapp.com">View</a></button>
+            </div>
+
+            <div class="project-card">
+                <h3>Project Two</h3>
+                <p>Full stack project with authentication and database.</p>
+                <button class="btn">View</button>
+            </div>
+
+            <div class="project-card">
+                <h3>Project Three</h3>
+                <p>Creative UI design with advanced animations.</p>
+                <button class="btn">View</button>
+            </div>
+
+            <!-- 👉 Add unlimited project-card here -->
+
+        </div>
+
+        <button class="slider-btn next">&#10095;</button>
+    </div>
+</section>
+
+
+<section class="contact" id="contact">
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+    </form>
+    <div class="success-message" id="successMessage">
+        Message sent successfully!
+    </div>
+</section>
+
+<footer>
+    <p id="foot">© 2026 Your Name | All Rights Reserved</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
