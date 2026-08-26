@@ -238,38 +238,208 @@ section{
 }
 
 
-/* PROFILE CIRCLE */
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    min-height: 650px;
+
+    padding: 120px 10% 80px;
+
+    gap: 60px;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero-text h2 {
+    font-size: 48px;
+    line-height: 1.2;
+}
+
+.hero-text span {
+    color: #00adb5;
+}
+
+.hero-text p {
+    margin: 20px 0;
+    line-height: 1.6;
+    opacity: 0.8;
+}
+
+
+/* =========================
+   PROFILE IMAGE
+========================= */
 
 .heros {
-  flex: 1;
-  text-align: center;
-  min-width: 350px;
-.heros {
-    width: 520px;
-    height: 520px;
+    width: 420px;
+    height: 420px;
+
+    min-width: 420px;
+
     border-radius: 50%;
+
     overflow: hidden;
+
     border: 4px solid #00bfff;
-    flex-shrink: 0;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
+    flex-shrink: 0;
+
+    box-shadow:
+        0 0 20px rgba(0, 191, 255, 0.25);
+
+    animation: float 4s ease-in-out infinite;
 }
 
 .heros img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center center;
+
     display: block;
+
+    object-fit: cover;
+
+    /*
+       Face ko center mein rakhta hai
+    */
+    object-position: center 30%;
 }
 
-/* @keyframes float{
-    0%{transform:translateY(0);}
-    50%{transform:translateY(-15px);}
-    100%{transform:translateY(0);}
-} */
 
+/* IMAGE FLOAT ANIMATION */
+
+@keyframes float {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills-section {
+    padding: 40px 10% 100px;
+    position: relative;
+}
+
+#skills {
+    display: inline-block;
+
+    font-size: 55px;
+
+    color: #1674df;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.skills {
+    display: flex;
+
+    gap: 25px;
+
+    margin-top: 25px;
+
+    flex-wrap: wrap;
+}
+
+.skills span {
+    padding: 15px 30px;
+
+    border-radius: 12px;
+
+    background: linear-gradient(
+        45deg,
+        #007b83,
+        #1674df
+    );
+
+    color: #fff;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+.skills span:hover {
+    transform: scale(1.08);
+
+    box-shadow:
+        0 5px 15px rgba(0, 173, 181, 0.4);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .hero {
+        flex-direction: column;
+
+        text-align: center;
+
+        min-height: auto;
+
+        padding-top: 130px;
+
+        gap: 50px;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .hero-text h2 {
+        font-size: 38px;
+    }
+
+    .heros {
+        width: 320px;
+        height: 320px;
+
+        min-width: 320px;
+    }
+
+    .skills-section {
+        text-align: center;
+    }
+
+    #skills {
+        font-size: 45px;
+    }
+
+    .skills {
+        justify-content: center;
+    }
+
+}
 /* PROJECTS */
 
 .projects{
