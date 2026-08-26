@@ -1,131 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-<title>Modern Portfolio</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+<!-- CSS File -->
+<link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-    <div class="bg-shape shape1"></div>
-    <div class="bg-shape shape2"></div>
-    <div class="bg-shape shape3"></div>
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="container nav-container">
+    <div class="logo">Portfolio</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
+<!-- THEME TOGGLE BUTTON -->
+<button class="theme-toggle" onclick="toggleTheme()">🌙 Dark</button>
 
-<nav>
-    <h1>MyPortfolio</h1>
-    <ul>
-        <li><a href="#home" class="nav-link active">Home</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-    </ul>
-</nav>
-
+<!-- HERO SECTION -->
 <section class="hero" id="home">
-
-    <div class="hero-text">
-        <h2>Hello, I'm <span>Abhishek</span></h2>
-
-        <p>
-            Creative developer building modern and visually impressive
-            web experiences with clean and scalable design.
-        </p>
-
-        <button class="btn" onclick="scrollToSection('contact')">
-            Hire Me
-        </button>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Abhishek</h1>
+        <h3>Software Engineer | Web developer</h3>
+        
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="#contact" class="btn btn-outline">Contact Me</a>
+      </div>
+      <div class="hero-image">
+        <img src="abhishek.jpeg">
+      </div>
     </div>
-
-    <div class="heros">
-        <img src="abhishek.jpeg" alt="Profile Photo">
-    </div>
-
+  </div>
 </section>
 
-
-<section class="skills-section">
-
-    <h1 id="skills">Skills</h1>
-
-    <div class="skills">
-        <span>MySql</span>
-        <span>Web development</span>
-        <span>Core PHP</span>
-    </div>
-
-</section>
-<!-- <section class="projects" id="projects">
-    <h2>My Projects</h2>
-    <div class="project-grid">
-        <div class="project-card">
-            <h3>Project One</h3>
-            <p>Modern responsive web application with smooth UI.</p>
-            <button class="btn">View</button>
-        </div>
-        <div class="project-card">
-            <h3>Project Two</h3>
-            <p>Full stack project with authentication and database.</p>
-            <button class="btn">View</button>
-        </div>
-        <div class="project-card">
-            <h3>Project Three</h3>
-            <p>Creative UI design with advanced animations.</p>
-            <button class="btn">View</button>
-        </div>
-    </div>
-</section> -->
-
+<!-- PROJECTS SECTION -->
 <section class="projects" id="projects">
-    <h2>My Projects</h2>
-
-    <div class="slider-container">
-        <button class="slider-btn prev">&#10094;</button>
-
-        <div class="project-grid slider-track">
-            <div class="project-card">
-                <h3>Library Management System</h3>
-                <p>Modern responsive web application with smooth UI with crud operations and database connectivity.</p>
-                <button class="btn"><a id="wlink" href="https://library-man13.infinityfreeapp.com">View</a></button>
-            </div>
-
-            
-
-            <div class="project-card">
-                <h3>Simplilearn Project</h3>
-                <p>Creative UI design with advanced animations an educational platform.</p>
-                <button class="btn">View</button>
-            </div>
-
-            <!-- 👉 Add unlimited project-card here -->
-
-        </div>
-
-        <button class="slider-btn next">&#10095;</button>
+  <div class="container">
+    <h2>Projects</h2>
+    <div class="project-card">
+      <a href="https://library01.free.nf/">Library Management</a>
     </div>
+    <div class="project-card">
+      <a href="https://rest07.infinityfreeapp.com">Simplilearn Project</a>
+    </div>
+  </div>
 </section>
 
+<!-- SKILLS SECTION -->
+<section class="skills" id="skills">
+  <div class="container">
+    <h2>Technical Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-box">Web-D</div>
+      <div class="skill-box">Core PHP</div>
+      <div class="skill-box">MySQL</div>
 
+      
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
 <section class="contact" id="contact">
-    <h2>Contact Me</h2>
-    <form id="contactForm">
-        <input type="text" id="name" placeholder="Your Name" required>
-        <input type="email" id="email" placeholder="Your Email" required>
-        <textarea id="message" placeholder="Your Message" required></textarea>
-        <button type="submit" class="btn">Send Message</button>
+  <div class="container">
+    <h2>Contact</h2>
+    <p>Email: abhishek77r1@gmail.com</p>
+    <!-- <p>LinkedIn: linkedin.com/in/yourname</p> -->
+
+    <form class="contact-form" action="#" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn btn-primary">Send Message</button>
     </form>
-    <div class="success-message" id="successMessage">
-        Message sent successfully!
-    </div>
+  </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
-    <p id="foot">© 2026 Your Name | All Rights Reserved</p>
+  © 2026 Your Name. All rights reserved.
 </footer>
 
+<!-- JS File -->
 <script src="script.js"></script>
+
 </body>
 </html>
+
