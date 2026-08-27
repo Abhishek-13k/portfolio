@@ -1,106 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Abhishek - Software Engineer / Web Developer Portfolio">
+    <title>Abhishek | Software Engineer & Web Developer</title>
 
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-<!-- CSS File -->
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<!-- NAVBAR -->
-<header class="navbar">
-  <div class="container nav-container">
-    <div class="logo">Portfolio</div>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container nav">
+            <a href="#home" class="logo">Abhishek<span>.</span></a>
 
-<!-- THEME TOGGLE BUTTON -->
-<button class="theme-toggle" onclick="toggleTheme()">🌙 Dark</button>
+            <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-<!-- HERO SECTION -->
-<section class="hero" id="home">
-  <div class="container">
-    <div class="hero-content">
-      <div class="hero-text">
-        <h1>Abhishek</h1>
-        <h3>Software Engineer | Web developer</h3>
-        
-        <a href="#projects" class="btn btn-primary">View Projects</a>
-        <a href="#contact" class="btn btn-outline">Contact Me</a>
-      </div>
-      <div class="hero-image">
-        <img src="abhishek.jpeg">
-      </div>
-    </div>
-  </div>
-</section>
+            <nav class="navbar" id="navbar">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
 
-<!-- PROJECTS SECTION -->
-<section class="projects" id="projects">
-  <div class="container">
-    <h2>Projects</h2>
-    <div class="project-card">
-      <a href="https://library01.free.nf/">Library Management</a>
-    </div>
-    <div class="project-card">
-      <a href="https://rest07.infinityfreeapp.com">Simplilearn Project</a>
-    </div>
-  </div>
-</section>
+    <main>
+        <!-- Hero -->
+        <section class="hero" id="home">
+            <div class="hero-glow glow-one"></div>
+            <div class="hero-glow glow-two"></div>
 
-<!-- SKILLS SECTION -->
-<section class="skills" id="skills">
-  <div class="container">
-    <h2>Technical Skills</h2>
-    <div class="skills-grid">
-      <div class="skill-box">Web-D</div>
-      <div class="skill-box">Core PHP</div>
-      <div class="skill-box">MySQL</div>
+            <div class="container hero-content">
+                <div class="hero-text reveal">
+                    <p class="eyebrow">HELLO, I'M</p>
+                    <h1>Abhishek</h1>
+                    <h2>Software Engineer <span>/</span> Web Developer</h2>
 
-      
-    </div>
-  </div>
-</section>
+                    <p class="hero-description">
+                        I build clean, efficient and user-friendly web applications
+                        using PHP, MySQL and modern web technologies.
+                    </p>
 
-<!-- CONTACT SECTION -->
-<section class="contact" id="contact">
-  <div class="container">
-    <h2>Contact</h2>
-    <p>Email: abhishek77r1@gmail.com</p>
-    <!-- <p>LinkedIn: linkedin.com/in/yourname</p> -->
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View Projects <span>↗</span></a>
+                        <a href="mailto:abhishek77r1@gmail.com" class="btn btn-outline">Contact Me</a>
+                    </div>
 
-    <form class="contact-form" action="#" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn btn-primary">Send Message</button>
-    </form>
-  </div>
-</section>
+                    <div class="socials">
+                        <a href="mailto:abhishek77r1@gmail.com" aria-label="Email">✉</a>
+                        <a href="#projects" aria-label="Projects">⌘</a>
+                        <a href="#contact" aria-label="Contact">↗</a>
+                    </div>
+                </div>
 
-<!-- FOOTER -->
-<footer>
-  © 2026 Your Name. All rights reserved.
-</footer>
+                <div class="hero-image reveal">
+                    <div class="image-ring">
+                        <div class="image-bg"></div>
+                        <img src="profile.jpg" alt="Abhishek profile photo">
+                    </div>
+                    <!-- <div class="floating-card">
+                        <strong>PHP</strong>
+                        <span>Web Developer</span>
+                    </div> -->
+                </div>
+            </div>
 
-<!-- JS File -->
-<script src="script.js"></script>
+            <div class="scroll-down">
+                <span>SCROLL</span>
+                <div></div>
+            </div>
+        </section>
 
+        <!-- About -->
+        <section class="section" id="about">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">GET TO KNOW ME</p>
+                    <h2>About <span>Me</span></h2>
+                    <p>Passionate about building practical web solutions.</p>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-text reveal">
+                        <h3>I turn ideas into <span>working web applications.</span></h3>
+                        <p>
+                            I'm Abhishek, a Software Engineer / Web Developer focused on
+                            developing practical and user-friendly web applications.
+                            I enjoy working with Core PHP, MySQL and web technologies.
+                        </p>
+                        <p>
+                            My approach is simple: write clean code, understand the
+                            requirement and build solutions that are easy to use and maintain.
+                        </p>
+
+                        <div class="info-list">
+                            <div><span>Name</span><strong>Abhishek</strong></div>
+                            <div><span>Role</span><strong>Software Engineer / Web Developer</strong></div>
+                            <div><span>Email</span><strong>abhishek77r1@gmail.com</strong></div>
+                        </div>
+                    </div>
+
+                    <div class="about-card reveal">
+                        <div class="stat">
+                            <strong>02+</strong>
+                            <span>Projects</span>
+                        </div>
+                        <div class="stat">
+                            <strong>03</strong>
+                            <span>Core Skills</span>
+                        </div>
+                        <div class="card-line"></div>
+                        <p>Focused on building clean, functional and responsive websites.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section class="section section-alt" id="skills">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">WHAT I WORK WITH</p>
+                    <h2>Technical <span>Skills</span></h2>
+                    <p>My core development skills.</p>
+                </div>
+
+                <div class="skills-grid">
+                    <article class="skill-card reveal">
+                        <div class="skill-icon">&lt;/&gt;</div>
+                        <h3>Web-D</h3>
+                        <p>HTML, CSS, JavaScript and responsive web development.</p>
+                        <div class="skill-bar"><span style="width: 88%"></span></div>
+                    </article>
+
+                    <article class="skill-card reveal">
+                        <div class="skill-icon">PHP</div>
+                        <h3>Core PHP</h3>
+                        <p>Dynamic websites, forms, sessions, CRUD operations and backend logic.</p>
+                        <div class="skill-bar"><span style="width: 92%"></span></div>
+                    </article>
+
+                    <article class="skill-card reveal">
+                        <div class="skill-icon">DB</div>
+                        <h3>MySQL</h3>
+                        <p>Database design, queries, relationships, CRUD and data management.</p>
+                        <div class="skill-bar"><span style="width: 86%"></span></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section class="section" id="projects">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">MY RECENT WORK</p>
+                    <h2>Featured <span>Projects</span></h2>
+                    <p>Some of the projects I've worked on.</p>
+                </div>
+
+                <div class="projects-grid">
+                    <article class="project-card reveal">
+                        <div class="project-number">01</div>
+                        <div class="project-content">
+                            <p class="project-type">WEB APPLICATION</p>
+                            <h3>Library Management System</h3>
+                            <p>
+                                A web-based library management application for managing
+                                books, users, issue/return records and library data.
+                            </p>
+                            <div class="tags">
+                                <span>PHP</span>
+                                <span>MySQL</span>
+                                <span>HTML/CSS</span>
+                            </div>
+                        </div>
+                        <div class="project-arrow">↗</div>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-number">02</div>
+                        <div class="project-content">
+                            <p class="project-type">WEB DEVELOPMENT</p>
+                            <h3>Simplilearn Project</h3>
+                            <p>
+                                A practical web development project created as part of
+                                Simplilearn training, applying web development concepts.
+                            </p>
+                            <div class="tags">
+                                <span>PHP</span>
+                                <span>MySQL</span>
+                                <span>Web-D</span>
+                            </div>
+                        </div>
+                        <div class="project-arrow">↗</div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="contact-section" id="contact">
+            <div class="container">
+                <div class="contact-box reveal">
+                    <div>
+                        <p class="eyebrow">LET'S CONNECT</p>
+                        <h2>Have a project in mind?</h2>
+                        <p>
+                            I'm open to opportunities and interesting web development projects.
+                        </p>
+                    </div>
+
+                    <a href="mailto:abhishek77r1@gmail.com" class="btn btn-primary">
+                        Get In Touch <span>↗</span>
+                    </a>
+                </div>
+
+                <div class="contact-details reveal">
+                    <span>EMAIL</span>
+                    <a href="mailto:abhishek77r1@gmail.com">abhishek77r1@gmail.com</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <p>© <span id="year"></span> Abhishek. All Rights Reserved.</p>
+            <a href="#home">Back to top ↑</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
-
